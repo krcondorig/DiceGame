@@ -16,7 +16,7 @@ public class Game {
             System.out.println("You got a " + roll);
             if (roll == 6 && player.getPosition() < 4) {
                 System.out.println("You can't move back any further");
-                spaces = 0;
+                spaces = -player.getPosition();
             }
             player.move(spaces);
             System.out.println("Your new position is: " + player.getPosition());

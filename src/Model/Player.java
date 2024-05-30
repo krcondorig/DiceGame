@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 
 public class Player {
+
     private int position;
 
     public Player() {
@@ -15,8 +16,6 @@ public class Player {
         if (newPosition > 7) {
             newPosition = this.position - (newPosition - 7);
             System.out.println("The sum of your current position and the spaces to move forward exceeds 7. You will move back " + (this.position - newPosition) + " spaces.");
-        } else if (newPosition < 0) {
-            newPosition = 0;
         }
         int movedSpaces = newPosition - this.position;
         this.position = newPosition;
